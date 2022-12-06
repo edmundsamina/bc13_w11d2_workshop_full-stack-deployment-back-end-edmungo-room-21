@@ -4,7 +4,7 @@ import { getShoppingList, postListItem } from "../models/shoppingList.js";
 const router = express.Router();
 
 /* GET shopping list. */
-router.get("/", async (req, res) => {
+router.get("/items", async (req, res) => {
   const data = await getShoppingList();
   res.json({ success: true, payload: data });
 });
